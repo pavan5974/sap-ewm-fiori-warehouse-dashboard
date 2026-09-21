@@ -1,0 +1,84 @@
+<mvc:View
+    controllerName="ewm.controller.Putaway"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Putaway Operations">
+
+        <content>
+
+            <VBox class="pageMargin">
+
+                <Title
+                    text="Putaway Operations"
+                    level="H2"/>
+
+                <Text
+                    text="Move received stock from source areas to destination storage bins."/>
+
+                <Table
+                    items="{ewm>/putawayTasks}"
+                    inset="false">
+
+                    <columns>
+
+                        <Column>
+                            <Text text="Warehouse Task"/>
+                        </Column>
+
+                        <Column>
+                            <Text text="Product"/>
+                        </Column>
+
+                        <Column>
+                            <Text text="Quantity"/>
+                        </Column>
+
+                        <Column>
+                            <Text text="Source Bin"/>
+                        </Column>
+
+                        <Column>
+                            <Text text="Destination Bin"/>
+                        </Column>
+
+                        <Column>
+                            <Text text="Status"/>
+                        </Column>
+
+                    </columns>
+
+                    <items>
+
+                        <ColumnListItem>
+
+                            <cells>
+
+                                <Text text="{ewm>warehouseTask}"/>
+
+                                <Text text="{ewm>product}"/>
+
+                                <Text text="{ewm>quantity}"/>
+
+                                <Text text="{ewm>sourceBin}"/>
+
+                                <Text text="{ewm>destinationBin}"/>
+
+                                <ObjectStatus
+                                    text="{ewm>status}"/>
+
+                            </cells>
+
+                        </ColumnListItem>
+
+                    </items>
+
+                </Table>
+
+            </VBox>
+
+        </content>
+
+    </Page>
+
+</mvc:View>

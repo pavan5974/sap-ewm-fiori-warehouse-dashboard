@@ -1,0 +1,34 @@
+<mvc:View
+    controllerName="ewm.controller.Dashboard"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="SAP EWM Warehouse Dashboard">
+        <content>
+            <VBox class="pageMargin">
+                <Title
+                    text="{ewm>/warehouse/name}"
+                    level="H2"/>
+
+                <Text
+                    text="Warehouse: {ewm>/warehouse/number}"/>
+
+                <Text
+                    text="Location: {ewm>/warehouse/location}"/>
+
+                <ObjectNumber
+                    number="{ewm>/kpis/totalStock}"
+                    unit="EA"/>
+
+                <ObjectNumber
+                    number="{ewm>/kpis/availableStock}"
+                    unit="EA"/>
+
+                <ObjectNumber
+                    number="{ewm>/kpis/openWarehouseTasks}"
+                    unit="Tasks"/>
+            </VBox>
+        </content>
+    </Page>
+
+</mvc:View>

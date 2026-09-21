@@ -1,0 +1,39 @@
+<mvc:View
+    controllerName="ewm.controller.Outbound"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Outbound Deliveries">
+        <content>
+            <VBox class="pageMargin">
+                <Title text="Outbound Operations" level="H2"/>
+                <Text text="Monitor customer deliveries and warehouse fulfillment."/>
+
+                <Table items="{ewm>/outboundDeliveries}">
+                    <columns>
+                        <Column><Text text="Delivery"/></Column>
+                        <Column><Text text="Sales Order"/></Column>
+                        <Column><Text text="Customer"/></Column>
+                        <Column><Text text="Quantity"/></Column>
+                        <Column><Text text="Priority"/></Column>
+                        <Column><Text text="Status"/></Column>
+                    </columns>
+
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{ewm>delivery}"/>
+                                <Text text="{ewm>salesOrder}"/>
+                                <Text text="{ewm>customer}"/>
+                                <Text text="{ewm>quantity}"/>
+                                <ObjectStatus text="{ewm>priority}"/>
+                                <ObjectStatus text="{ewm>status}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+        </content>
+    </Page>
+
+</mvc:View>

@@ -1,0 +1,39 @@
+<mvc:View
+    controllerName="ewm.controller.Inbound"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Inbound Deliveries">
+        <content>
+            <VBox class="pageMargin">
+                <Title text="Inbound Operations" level="H2"/>
+                <Text text="Inbound deliveries, receiving and warehouse processing"/>
+
+                <Table
+                    items="{ewm>/inboundDeliveries}"
+                    inset="false">
+
+                    <columns>
+                        <Column><Text text="Delivery"/></Column>
+                        <Column><Text text="Supplier"/></Column>
+                        <Column><Text text="PO"/></Column>
+                        <Column><Text text="Status"/></Column>
+                    </columns>
+
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{ewm>delivery}"/>
+                                <Text text="{ewm>supplier}"/>
+                                <Text text="{ewm>po}"/>
+                                <ObjectStatus text="{ewm>status}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+
+                </Table>
+            </VBox>
+        </content>
+    </Page>
+
+</mvc:View>

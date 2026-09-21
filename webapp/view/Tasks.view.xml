@@ -1,0 +1,41 @@
+<mvc:View
+    controllerName="ewm.controller.Tasks"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Warehouse Tasks">
+        <content>
+            <VBox class="pageMargin">
+                <Title text="Warehouse Task Management" level="H2"/>
+                <Text text="Monitor open, in-progress and completed warehouse tasks."/>
+
+                <Table items="{ewm>/warehouseTasks}">
+                    <columns>
+                        <Column><Text text="WT"/></Column>
+                        <Column><Text text="WO"/></Column>
+                        <Column><Text text="Product"/></Column>
+                        <Column><Text text="Source"/></Column>
+                        <Column><Text text="Destination"/></Column>
+                        <Column><Text text="Priority"/></Column>
+                        <Column><Text text="Status"/></Column>
+                    </columns>
+
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{ewm>warehouseTask}"/>
+                                <Text text="{ewm>warehouseOrder}"/>
+                                <Text text="{ewm>product}"/>
+                                <Text text="{ewm>sourceBin}"/>
+                                <Text text="{ewm>destinationBin}"/>
+                                <ObjectStatus text="{ewm>priority}"/>
+                                <ObjectStatus text="{ewm>status}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+        </content>
+    </Page>
+
+</mvc:View>

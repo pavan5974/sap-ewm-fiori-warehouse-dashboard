@@ -1,0 +1,30 @@
+<mvc:View
+    controllerName="ewm.controller.Alerts"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Warehouse Alerts">
+
+        <content>
+
+            <List
+                items="{ewm>/alerts}"
+                headerText="Warehouse Alerts">
+
+                <items>
+
+                    <StandardListItem
+                        title="{ewm>title}"
+                        description="{ewm>description}"
+                        info="{ewm>severity}"
+                        infoState="{ewm>state}"/>
+
+                </items>
+
+            </List>
+
+        </content>
+
+    </Page>
+
+</mvc:View>

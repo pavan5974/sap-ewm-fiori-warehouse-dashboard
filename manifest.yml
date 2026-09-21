@@ -1,0 +1,7 @@
+﻿---
+applications:
+- name: myfioriapp
+  memory: 128M
+  buildpacks:
+    - staticfile_buildpack
+  path: .

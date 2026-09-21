@@ -1,0 +1,39 @@
+<mvc:View
+    controllerName="ewm.controller.Inventory"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Inventory">
+        <content>
+            <VBox class="pageMargin">
+                <Title text="Warehouse Inventory" level="H2"/>
+                <Text text="Stock overview by product, storage type and bin."/>
+
+                <Table items="{ewm>/inventory}">
+                    <columns>
+                        <Column><Text text="Product"/></Column>
+                        <Column><Text text="Description"/></Column>
+                        <Column><Text text="Storage Type"/></Column>
+                        <Column><Text text="Bin"/></Column>
+                        <Column><Text text="Available"/></Column>
+                        <Column><Text text="Blocked"/></Column>
+                    </columns>
+
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{ewm>product}"/>
+                                <Text text="{ewm>description}"/>
+                                <Text text="{ewm>storageType}"/>
+                                <Text text="{ewm>bin}"/>
+                                <ObjectNumber number="{ewm>available}"/>
+                                <ObjectNumber number="{ewm>blocked}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+        </content>
+    </Page>
+
+</mvc:View>

@@ -1,0 +1,39 @@
+<mvc:View
+    controllerName="ewm.controller.Packing"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Packing">
+        <content>
+            <VBox class="pageMargin">
+                <Title text="Packing Operations" level="H2"/>
+                <Text text="Monitor handling unit creation and packing activities."/>
+
+                <Table items="{ewm>/packing}">
+                    <columns>
+                        <Column><Text text="Delivery"/></Column>
+                        <Column><Text text="HU"/></Column>
+                        <Column><Text text="Product"/></Column>
+                        <Column><Text text="Quantity"/></Column>
+                        <Column><Text text="Packaging"/></Column>
+                        <Column><Text text="Status"/></Column>
+                    </columns>
+
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{ewm>delivery}"/>
+                                <Text text="{ewm>hu}"/>
+                                <Text text="{ewm>product}"/>
+                                <Text text="{ewm>quantity}"/>
+                                <Text text="{ewm>packagingMaterial}"/>
+                                <ObjectStatus text="{ewm>status}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+        </content>
+    </Page>
+
+</mvc:View>

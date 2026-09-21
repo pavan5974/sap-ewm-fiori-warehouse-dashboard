@@ -1,15 +1,170 @@
 {
+  "_version": "1.65.0",
+
   "sap.app": {
-    "id": "medical.inventory",
+    "id": "ewm",
     "type": "application",
-    "title": "Medical Inventory"
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "SAP EWM Warehouse Operations Control Center",
+    "description": "SAP EWM Warehouse Operations Simulation"
+  },
+
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
   },
 
   "sap.ui5": {
     "rootView": {
-      "viewName": "medical.inventory.view.Main",
+      "viewName": "ewm.view.App",
       "type": "XML",
-      "async": true
+      "async": true,
+      "id": "app"
+    },
+
+    "dependencies": {
+      "minUI5Version": "1.120.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.f": {},
+        "sap.ui.layout": {},
+        "sap.ui.table": {}
+      }
+    },
+
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ewm.i18n.i18n",
+          "supportedLocales": [
+            "en"
+          ],
+          "fallbackLocale": "en"
+        }
+      }
+    },
+
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "ewm.view",
+        "controlId": "mainApp",
+        "controlAggregation": "pages",
+        "async": true
+      },
+
+      "routes": [
+        {
+          "pattern": "",
+          "name": "dashboard",
+          "target": "dashboard"
+        },
+        {
+          "pattern": "inbound",
+          "name": "inbound",
+          "target": "inbound"
+        },
+        {
+          "pattern": "putaway",
+          "name": "putaway",
+          "target": "putaway"
+        },
+        {
+          "pattern": "tasks",
+          "name": "tasks",
+          "target": "tasks"
+        },
+        {
+          "pattern": "inventory",
+          "name": "inventory",
+          "target": "inventory"
+        },
+        {
+          "pattern": "outbound",
+          "name": "outbound",
+          "target": "outbound"
+        },
+        {
+          "pattern": "picking",
+          "name": "picking",
+          "target": "picking"
+        },
+        {
+          "pattern": "packing",
+          "name": "packing",
+          "target": "packing"
+        },
+        {
+          "pattern": "handling-units",
+          "name": "handlingUnits",
+          "target": "handlingUnits"
+        },
+        {
+          "pattern": "alerts",
+          "name": "alerts",
+          "target": "alerts"
+        }
+      ],
+
+      "targets": {
+        "dashboard": {
+          "viewName": "Dashboard",
+          "viewId": "dashboard"
+        },
+        "inbound": {
+          "viewName": "Inbound",
+          "viewId": "inbound"
+        },
+        "putaway": {
+          "viewName": "Putaway",
+          "viewId": "putaway"
+        },
+        "tasks": {
+          "viewName": "Tasks",
+          "viewId": "tasks"
+        },
+        "inventory": {
+          "viewName": "Inventory",
+          "viewId": "inventory"
+        },
+        "outbound": {
+          "viewName": "Outbound",
+          "viewId": "outbound"
+        },
+        "picking": {
+          "viewName": "Picking",
+          "viewId": "picking"
+        },
+        "packing": {
+          "viewName": "Packing",
+          "viewId": "packing"
+        },
+        "handlingUnits": {
+          "viewName": "HandlingUnits",
+          "viewId": "handlingUnits"
+        },
+        "alerts": {
+          "viewName": "Alerts",
+          "viewId": "alerts"
+        }
+      }
     }
   }
 }

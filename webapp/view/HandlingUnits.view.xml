@@ -1,0 +1,41 @@
+<mvc:View
+    controllerName="ewm.controller.HandlingUnits"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Handling Units">
+        <content>
+            <VBox class="pageMargin">
+                <Title text="Handling Unit Management" level="H2"/>
+                <Text text="Track HUs, products, quantities and warehouse locations."/>
+
+                <Table items="{ewm>/handlingUnits}">
+                    <columns>
+                        <Column><Text text="HU"/></Column>
+                        <Column><Text text="Type"/></Column>
+                        <Column><Text text="Product"/></Column>
+                        <Column><Text text="Quantity"/></Column>
+                        <Column><Text text="Location"/></Column>
+                        <Column><Text text="Weight"/></Column>
+                        <Column><Text text="Status"/></Column>
+                    </columns>
+
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{ewm>hu}"/>
+                                <Text text="{ewm>type}"/>
+                                <Text text="{ewm>product}"/>
+                                <Text text="{ewm>quantity}"/>
+                                <Text text="{ewm>location}"/>
+                                <Text text="{ewm>weight}"/>
+                                <ObjectStatus text="{ewm>status}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+        </content>
+    </Page>
+
+</mvc:View>

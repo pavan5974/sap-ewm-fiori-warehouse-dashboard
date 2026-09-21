@@ -1,0 +1,384 @@
+{
+  "navigation": [
+    {
+      "title": "Dashboard",
+      "icon": "sap-icon://home"
+    },
+    {
+      "title": "Inbound",
+      "icon": "sap-icon://inbound-delivery"
+    },
+    {
+      "title": "Putaway",
+      "icon": "sap-icon://inventory"
+    },
+    {
+      "title": "Warehouse Tasks",
+      "icon": "sap-icon://activity-items"
+    },
+    {
+      "title": "Inventory",
+      "icon": "sap-icon://product"
+    },
+    {
+      "title": "Outbound",
+      "icon": "sap-icon://outbound-delivery"
+    },
+    {
+      "title": "Picking",
+      "icon": "sap-icon://shipping-status"
+    },
+    {
+      "title": "Packing",
+      "icon": "sap-icon://box"
+    },
+    {
+      "title": "Handling Units",
+      "icon": "sap-icon://shipping-status"
+    },
+    {
+      "title": "Alerts",
+      "icon": "sap-icon://message-warning"
+    }
+  ],
+
+  "warehouse": {
+    "number": "WH01",
+    "name": "Central Distribution Warehouse",
+    "location": "Hyderabad, India",
+    "capacity": 87
+  },
+
+  "kpis": {
+    "totalStock": 12450,
+    "availableStock": 11820,
+    "blockedStock": 630,
+    "openWarehouseTasks": 247,
+    "inboundDeliveries": 128,
+    "outboundDeliveries": 96
+  },
+
+  "operations": [
+    {
+      "operation": "Receiving",
+      "openTasks": 82,
+      "priority": "High",
+      "priorityState": "Warning",
+      "status": "In Progress",
+      "statusState": "Information"
+    },
+    {
+      "operation": "Putaway",
+      "openTasks": 64,
+      "priority": "High",
+      "priorityState": "Warning",
+      "status": "In Progress",
+      "statusState": "Information"
+    },
+    {
+      "operation": "Picking",
+      "openTasks": 91,
+      "priority": "Critical",
+      "priorityState": "Error",
+      "status": "In Progress",
+      "statusState": "Information"
+    }
+  ],
+
+  "inboundDeliveries": [
+    {
+      "delivery": "1800004512",
+      "supplier": "ABC Electronics",
+      "po": "4500012345",
+      "quantity": 500,
+      "receivingPoint": "GR-ZONE-01",
+      "status": "In Receiving"
+    },
+    {
+      "delivery": "1800004513",
+      "supplier": "Global Components",
+      "po": "4500012346",
+      "quantity": 300,
+      "receivingPoint": "GR-ZONE-02",
+      "status": "Completed"
+    },
+    {
+      "delivery": "1800004514",
+      "supplier": "Tech Supplies India",
+      "po": "4500012347",
+      "quantity": 750,
+      "receivingPoint": "GR-ZONE-01",
+      "status": "In Progress"
+    },
+    {
+      "delivery": "1800004515",
+      "supplier": "Prime Distributors",
+      "po": "4500012348",
+      "quantity": 250,
+      "receivingPoint": "GR-ZONE-03",
+      "status": "Pending"
+    }
+  ],
+
+  "putawayTasks": [
+    {
+      "warehouseTask": "10000001",
+      "product": "MAT-10001",
+      "quantity": 120,
+      "sourceBin": "GR-ZONE-01",
+      "destinationBin": "A-01-01-01",
+      "status": "Open"
+    },
+    {
+      "warehouseTask": "10000002",
+      "product": "MAT-10002",
+      "quantity": 80,
+      "sourceBin": "GR-ZONE-01",
+      "destinationBin": "A-01-02-01",
+      "status": "In Progress"
+    },
+    {
+      "warehouseTask": "10000003",
+      "product": "MAT-10003",
+      "quantity": 200,
+      "sourceBin": "GR-ZONE-02",
+      "destinationBin": "B-02-01-01",
+      "status": "Completed"
+    },
+    {
+      "warehouseTask": "10000004",
+      "product": "MAT-10004",
+      "quantity": 150,
+      "sourceBin": "GR-ZONE-03",
+      "destinationBin": "B-02-02-01",
+      "status": "Open"
+    }
+  ],
+
+  "warehouseTasks": [
+    {
+      "warehouseTask": "WT100001",
+      "warehouseOrder": "WO500001",
+      "product": "MAT-10001",
+      "sourceBin": "GR-ZONE-01",
+      "destinationBin": "A-01-01-01",
+      "priority": "High",
+      "status": "Open"
+    },
+    {
+      "warehouseTask": "WT100002",
+      "warehouseOrder": "WO500002",
+      "product": "MAT-10002",
+      "sourceBin": "A-01-01-01",
+      "destinationBin": "PICK-01-01",
+      "priority": "Medium",
+      "status": "In Progress"
+    },
+    {
+      "warehouseTask": "WT100003",
+      "warehouseOrder": "WO500003",
+      "product": "MAT-10003",
+      "sourceBin": "A-02-01-01",
+      "destinationBin": "PACK-01",
+      "priority": "Critical",
+      "status": "Open"
+    },
+    {
+      "warehouseTask": "WT100004",
+      "warehouseOrder": "WO500004",
+      "product": "MAT-10004",
+      "sourceBin": "B-01-01-01",
+      "destinationBin": "A-03-01-01",
+      "priority": "Low",
+      "status": "Completed"
+    }
+  ],
+
+  "inventory": [
+    {
+      "product": "MAT-10001",
+      "description": "Smartphone",
+      "storageType": "High Rack",
+      "bin": "A-01-01-01",
+      "available": 2500,
+      "blocked": 100
+    },
+    {
+      "product": "MAT-10002",
+      "description": "Laptop",
+      "storageType": "High Rack",
+      "bin": "A-01-02-01",
+      "available": 1800,
+      "blocked": 50
+    },
+    {
+      "product": "MAT-10003",
+      "description": "Monitor",
+      "storageType": "Bulk Storage",
+      "bin": "B-02-01-01",
+      "available": 3200,
+      "blocked": 200
+    },
+    {
+      "product": "MAT-10004",
+      "description": "Keyboard",
+      "storageType": "Small Parts",
+      "bin": "B-02-02-01",
+      "available": 4320,
+      "blocked": 280
+    }
+  ],
+
+  "outboundDeliveries": [
+    {
+      "delivery": "8000007812",
+      "salesOrder": "5000012345",
+      "customer": "Reliance Retail",
+      "quantity": 450,
+      "priority": "High",
+      "status": "Picking"
+    },
+    {
+      "delivery": "8000007813",
+      "salesOrder": "5000012346",
+      "customer": "Croma Retail",
+      "quantity": 250,
+      "priority": "Medium",
+      "status": "Packing"
+    },
+    {
+      "delivery": "8000007814",
+      "salesOrder": "5000012347",
+      "customer": "Amazon India",
+      "quantity": 600,
+      "priority": "Critical",
+      "status": "Picking"
+    },
+    {
+      "delivery": "8000007815",
+      "salesOrder": "5000012348",
+      "customer": "Flipkart",
+      "quantity": 300,
+      "priority": "Low",
+      "status": "Ready for Dispatch"
+    }
+  ],
+
+  "pickingTasks": [
+    {
+      "warehouseTask": "PICK10001",
+      "delivery": "8000007812",
+      "product": "MAT-10001",
+      "quantity": 150,
+      "sourceBin": "A-01-01-01",
+      "picker": "EMP1001",
+      "status": "In Progress"
+    },
+    {
+      "warehouseTask": "PICK10002",
+      "delivery": "8000007813",
+      "product": "MAT-10002",
+      "quantity": 100,
+      "sourceBin": "A-01-02-01",
+      "picker": "EMP1002",
+      "status": "Completed"
+    },
+    {
+      "warehouseTask": "PICK10003",
+      "delivery": "8000007814",
+      "product": "MAT-10003",
+      "quantity": 300,
+      "sourceBin": "B-02-01-01",
+      "picker": "EMP1003",
+      "status": "Open"
+    }
+  ],
+
+  "packing": [
+    {
+      "delivery": "8000007812",
+      "hu": "HU900001",
+      "product": "MAT-10001",
+      "quantity": 50,
+      "packagingMaterial": "BOX-L",
+      "status": "Packed"
+    },
+    {
+      "delivery": "8000007813",
+      "hu": "HU900002",
+      "product": "MAT-10002",
+      "quantity": 25,
+      "packagingMaterial": "BOX-M",
+      "status": "In Packing"
+    },
+    {
+      "delivery": "8000007814",
+      "hu": "HU900003",
+      "product": "MAT-10003",
+      "quantity": 100,
+      "packagingMaterial": "BOX-L",
+      "status": "Waiting"
+    }
+  ],
+
+  "handlingUnits": [
+    {
+      "hu": "HU900001",
+      "type": "Pallet",
+      "product": "MAT-10001",
+      "quantity": 50,
+      "location": "PACK-01",
+      "weight": "320 KG",
+      "status": "Packed"
+    },
+    {
+      "hu": "HU900002",
+      "type": "Carton",
+      "product": "MAT-10002",
+      "quantity": 25,
+      "location": "PACK-02",
+      "weight": "180 KG",
+      "status": "In Packing"
+    },
+    {
+      "hu": "HU900003",
+      "type": "Pallet",
+      "product": "MAT-10003",
+      "quantity": 100,
+      "location": "STAGE-01",
+      "weight": "450 KG",
+      "status": "Staged"
+    }
+  ],
+
+  "alerts": [
+    {
+      "id": "AL001",
+      "severity": "High",
+      "state": "Error",
+      "title": "Low Stock",
+      "description": "Some warehouse products are below minimum stock level."
+    },
+    {
+      "id": "AL002",
+      "severity": "Medium",
+      "state": "Warning",
+      "title": "Delayed Warehouse Tasks",
+      "description": "Several warehouse tasks are waiting for execution."
+    },
+    {
+      "id": "AL003",
+      "severity": "High",
+      "state": "Error",
+      "title": "Critical Picking Task",
+      "description": "A high-priority outbound picking task requires immediate execution."
+    },
+    {
+      "id": "AL004",
+      "severity": "Medium",
+      "state": "Warning",
+      "title": "Warehouse Capacity",
+      "description": "Warehouse capacity utilization has reached 87%."
+    }
+  ]
+}
